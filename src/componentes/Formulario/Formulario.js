@@ -5,15 +5,6 @@ import ListaSuspensa from '../ListaSuspensa';
 
 export const Formulario = (props) => {
 
-  const times = [
-    'Programação',
-    'Front-End',
-    'Data Science',
-    'Devops',
-    'UX e Design',
-    'Mobile'
-  ]
-
   const [nome, setNome] = useState('')
   const [cargo, setCargo] = useState('')
   const [imagem, setImagem] = useState('')
@@ -27,6 +18,11 @@ export const Formulario = (props) => {
       imagem,
       time
     })
+
+    setNome('')
+    setCargo('')
+    setImagem('')
+    setTime('')
   }
 
   return (
@@ -55,7 +51,7 @@ export const Formulario = (props) => {
         />
         <ListaSuspensa
           label='Time'
-          itens={times} 
+          itens={props.times} 
           valor={time}
           aoAlterado={valor => setTime(valor)}
         />
