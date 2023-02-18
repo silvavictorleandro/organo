@@ -1,7 +1,25 @@
 .formulario {
-  background-color: #f2f2f2;
-  border-radius: 20px;
-  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.15);
-  margin: 3rem 6rem;
+  display: flex;
+  justify-content: center;
+  margin: 3rem 3rem;
+}
+
+.formulario form {
   padding: .5rem 4rem;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 411px) {
+  
+  .formulario {
+    margin: 0;
+  }
+  
+  .formulario form {
+    border-radius: 0;
+    box-shadow: none;
+    padding: 2rem;
+  }
 }

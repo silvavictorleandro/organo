@@ -1,5 +1,5 @@
 .time {
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
   text-align: center;
 }
 
@@ -13,6 +13,5 @@
 .time .colaboradores {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 2rem;
+  justify-content: center;
 }

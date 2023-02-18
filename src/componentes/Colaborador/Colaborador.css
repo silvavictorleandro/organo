@@ -1,5 +1,6 @@
 .colaborador {
   width: 280px;
+  margin: 0 2rem 2rem 2rem;
 }
 
 .colaborador .cabecalho {
@@ -27,6 +28,7 @@
   line-height: 22px;
   font-weight: bold;
   margin-bottom: 8px;
+  margin-top: 8px;
 }
 
 .colaborador .rodape h5 {
