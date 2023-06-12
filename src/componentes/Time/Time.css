@@ -1,5 +1,6 @@
 .time {
   padding: 0 2rem 2rem 2rem;
+  position: relative;
   text-align: center;
 }
 
@@ -14,4 +15,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.input-cor {
+  position: absolute;
+  right: 50px;
+  top: 20px;
 }
