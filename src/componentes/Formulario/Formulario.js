@@ -3,12 +3,14 @@ import Botao from '../Botao';
 import CampoTexto from '../CampoTexto';
 import ListaSuspensa from '../ListaSuspensa';
 
-export const Formulario = ({ aoColaboradorCadastrado, times }) => {
+export const Formulario = ({ aoColaboradorCadastrado, times, cadastrarTime }) => {
 
   const [nome, setNome] = useState('')
   const [cargo, setCargo] = useState('')
   const [imagem, setImagem] = useState('')
   const [time, setTime] = useState('')
+  const [nomeTime, setNomeTime] = useState('')
+  const [corTime, setCorTime] = useState('')
 
   const aoSalvar = (evento) => {
     evento.preventDefault()
@@ -59,6 +61,29 @@ export const Formulario = ({ aoColaboradorCadastrado, times }) => {
         />
         <Botao>
           Criar card
+        </Botao>
+      </form>
+      <form onSubmit={(e) => {
+        e.preventDefault()
+        cadastrarTime({ nome: nomeTime, cor: corTime })
+      }}>
+        <h2>Preencha os dados para criar um novo time</h2>
+        <CampoTexto
+          obrigatorio={true}
+          label='Nome'
+          placeholder='Digite o nome do time' 
+          valor={nomeTime}
+          aoAlterado={valor => setNomeTime(valor)}
+        />
+        <CampoTexto
+          obrigatorio={true}
+          label='Cor'
+          placeholder='Digite a cor do time' 
+          valor={corTime}
+          aoAlterado={valor => setCorTime(valor)}
+        />
+        <Botao>
+          Criar time
         </Botao>
       </form>
     </section>
