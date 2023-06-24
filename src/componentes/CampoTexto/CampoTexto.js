@@ -1,15 +1,15 @@
-export const CampoTexto = (props) => {
+export const CampoTexto = ({ aoAlterado, label, valor, obrigatorio, placeholder }) => {
 
   const aoDigitado = (e) => {
-    props.aoAlterado(e.target.value)
+    aoAlterado(e.target.value)
   }
 
   return (
     <div className='campo-texto'>
       <label>
-        {props.label}
+        {label}
       </label>
-      <input value={props.valor} onChange={aoDigitado} required={props.obrigatorio} placeholder={props.placeholder}/>
+      <input value={valor} onChange={aoDigitado} required={obrigatorio} placeholder={placeholder}/>
     </div>
   )
 }

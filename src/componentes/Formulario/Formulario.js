@@ -3,7 +3,7 @@ import Botao from '../Botao';
 import CampoTexto from '../CampoTexto';
 import ListaSuspensa from '../ListaSuspensa';
 
-export const Formulario = (props) => {
+export const Formulario = ({ aoColaboradorCadastrado, times }) => {
 
   const [nome, setNome] = useState('')
   const [cargo, setCargo] = useState('')
@@ -12,7 +12,7 @@ export const Formulario = (props) => {
 
   const aoSalvar = (evento) => {
     evento.preventDefault()
-    props.aoColaboradorCadastrado({
+    aoColaboradorCadastrado({
       nome,
       cargo,
       imagem,
@@ -51,8 +51,9 @@ export const Formulario = (props) => {
           aoAlterado={valor => setImagem(valor)}
         />
         <ListaSuspensa
+          obrigatorio={true}
           label='Time'
-          itens={props.times} 
+          itens={times} 
           valor={time}
           aoAlterado={valor => setTime(valor)}
         />
