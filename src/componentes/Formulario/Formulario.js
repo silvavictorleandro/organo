@@ -29,8 +29,8 @@ export const Formulario = ({ aoColaboradorCadastrado, times, cadastrarTime }) =>
   }
 
   return (
-    <section className='formulario'>
-      <form onSubmit={aoSalvar}>
+    <section className='formulario-container'>
+      <form className='formulario' onSubmit={aoSalvar}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
         <CampoTexto
           obrigatorio={true}
@@ -63,7 +63,7 @@ export const Formulario = ({ aoColaboradorCadastrado, times, cadastrarTime }) =>
           Criar card
         </Botao>
       </form>
-      <form onSubmit={(e) => {
+      <form className='formulario' onSubmit={(e) => {
         e.preventDefault()
         cadastrarTime({ nome: nomeTime, cor: corTime })
       }}>
