@@ -1,15 +1,15 @@
-.campo-texto {
+.campo-formulario {
   margin: 1.5rem 0;
 }
 
-.campo-texto label {
+.campo-formulario label {
   display: block;
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: .5rem;
 }
 
-.campo-texto input {
+.campo-formulario input {
   background-color: #fff;
   border: none;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
@@ -17,4 +17,9 @@
   font-size: 1rem;
   padding: 1.5rem;
   width: 100%;
+}
+
+.campo-formulario__color input {
+  height: 2rem;
+  padding: .4rem 1.5rem;
 }
