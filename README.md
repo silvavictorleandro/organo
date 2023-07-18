@@ -2,11 +2,11 @@
 
 <p align="center">Desenvolvido durante curso da Alura para aprender React</p>
 
-<div align="center">
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#-como iniciar">Como iniciar</a>
-</div>
+<p align="center">
+  <a href="#projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#como-iniciar">Como iniciar</a>
+</p>
 
 ## <img src="./public/imagens/banner.png">
 
