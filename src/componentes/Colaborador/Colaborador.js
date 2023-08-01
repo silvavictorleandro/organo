@@ -8,6 +8,7 @@ export const Colaborador = ({ colaborador, corDeFundo, aoDeletar, favoritarColab
 
   const propsFavorito = {
     size: 25,
+    className: "favoritar-colaborador",
     onClick: favoritar
   }
   

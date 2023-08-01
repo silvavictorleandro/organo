@@ -44,3 +44,7 @@
   right: -10px;
   top: -10px;
 }
+
+.deletar-colaborador:hover, .favoritar-colaborador:hover {
+  cursor: pointer;
+}
