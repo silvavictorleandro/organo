@@ -66,6 +66,10 @@ export const Formulario = ({ aoColaboradorCadastrado, times, cadastrarTime }) =>
       <form className='formulario' onSubmit={(e) => {
         e.preventDefault()
         cadastrarTime({ nome: nomeTime, cor: corTime })
+        console.log(nomeTime, corTime)
+        
+        setNomeTime('')
+        setCorTime('')
       }}>
         <h2>Preencha os dados para criar um novo time</h2>
         <CampoFormulario
