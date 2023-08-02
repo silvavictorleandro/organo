@@ -3,6 +3,9 @@ import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
 import { v4 as uuidv4 } from 'uuid';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { CgTrash } from 'react-icons/cg';
 
 function App() {
 
@@ -238,9 +241,12 @@ function App() {
   ]
 
   const [colaboradores, setColaboradores] = useState(listaColaboradores)
-  
+
   function deletarColaborador(id) {
     setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id))
+    toast.error("Colaborador deletado!", {
+      icon: CgTrash      
+    })
   }
 
   function mudarCorDoTime(cor, id) {
@@ -258,6 +264,8 @@ function App() {
 
   function cadastrarTime(novoTime) {
     setTimes([ ...times, { ...novoTime, id: uuidv4() }])
+    
+    toast.success('Novo time cadastrado!')
   }
 
   function favoritarColaborador(id) {
@@ -286,6 +294,7 @@ function App() {
           aoDeletar={deletarColaborador}
         />
       )}
+      <ToastContainer autoClose={7000} position={toast.POSITION.TOP_RIGHT} />
     </div>
   );
 }

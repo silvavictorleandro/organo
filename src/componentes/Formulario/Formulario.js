@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Botao from '../Botao';
 import CampoFormulario from '../CampoFormulario';
 import ListaSuspensa from '../ListaSuspensa';
+import { toast } from 'react-toastify';
 
 export const Formulario = ({ aoColaboradorCadastrado, times, cadastrarTime }) => {
 
@@ -14,12 +15,14 @@ export const Formulario = ({ aoColaboradorCadastrado, times, cadastrarTime }) =>
 
   const aoSalvar = (evento) => {
     evento.preventDefault()
+    toast.success('Usuário cadastrado!')
     aoColaboradorCadastrado({
       nome,
       cargo,
       imagem,
       time
     })
+
 
 
     setNome('')
@@ -66,7 +69,6 @@ export const Formulario = ({ aoColaboradorCadastrado, times, cadastrarTime }) =>
       <form className='formulario' onSubmit={(e) => {
         e.preventDefault()
         cadastrarTime({ nome: nomeTime, cor: corTime })
-        console.log(nomeTime, corTime)
         
         setNomeTime('')
         setCorTime('')
